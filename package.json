@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/z-ti/fly-ui#readme",
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.39"
-  }
+    "vuepress": "1.9.7",
+    "vuepress-theme-reco": "^1.6.11"
+  },
+  "dependencies": {}
 }
