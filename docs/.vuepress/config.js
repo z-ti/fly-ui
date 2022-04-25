@@ -1,7 +1,7 @@
 module.exports = {
     title: 'fly ui 文档',
     description: 'fly ui 最新官方文档',
-    base: '/',
+    base: '/fly-ui/',
     // 主题和它的配置
     theme: '@vuepress/theme-default',
     themeConfig: {
