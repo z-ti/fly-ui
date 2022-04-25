@@ -1,7 +1,7 @@
 module.exports = {
     title: 'fly ui 文档',
     description: 'fly ui 最新官方文档',
-    base: '/fly-ui/',
+    base: '/',
     // 主题和它的配置
     theme: '@vuepress/theme-default',
     themeConfig: {
@@ -38,7 +38,6 @@ module.exports = {
         ]
     },
     theme: 'reco',
-    port: 8888,
     locales: {
         '/': {
             lang: 'zh-CN'
