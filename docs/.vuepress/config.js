@@ -6,7 +6,8 @@ module.exports = {
     theme: '@vuepress/theme-default',
     themeConfig: {
         subSidebar: 'auto',
-        logo: 'https://vuejs.org/images/logo.png',
+        // logo: 'https://vuejs.org/images/logo.png',
+        logo: '/img/fly.svg',
         nav: [
             { text: '首页', link: '/' },
             { 
