@@ -17,27 +17,6 @@ jobs:
           static_list: "fly-ui"
           force_update: true
           debug: true
-
-      - name: Send dingding notify
-        uses: zcong1993/actions-ding@master
-        with:
-          dingToken: ${{ secrets.DING_TOKEN }}
-          secret: ${{ secrets.DING_SECRET }}
-          body: |
-            {
-              "msgtype": "markdown",
-              "markdown": {
-                  "title": "部署状态",
-                  "text": "#### 部署成功 @17600299297 \n > 祝大家劳动节快乐！ \n > ![screenshot](https://cdn3-banquan.ituchong.com/weili/l/918150397474767003.jpeg)\n > ###### 网站地址 [链接](https://z-ti.github.io/fly-ui/) \n"
-              },
-              "at": {
-                  "atMobiles": [
-                      "17600299297"
-                  ],
-                  "atUserIds": [],
-                  "isAtAll": false
-              }
-            }
       
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
@@ -50,3 +29,47 @@ jobs:
           gitee-repo: flybird-ui/fly-ui
           # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
           branch: gh-pages
+
+      - name: Send dingding ok notify
+        if: ${{ success() }}
+        uses: zcong1993/actions-ding@master
+        with:
+          dingToken: ${{ secrets.DING_TOKEN }}
+          secret: ${{ secrets.DING_SECRET }}
+          body: |
+            {
+              "msgtype": "markdown",
+              "markdown": {
+                  "title": "部署状态",
+                  "text": "#### 部署成功 @17600299297 \n > 意气成功日，春风起絮天。 \n > ![screenshot](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fseopic.699pic.com%2Fphoto%2F50088%2F9764.jpg_wh1200.jpg&refer=http%3A%2F%2Fseopic.699pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654021444&t=cdf518cc5f78036d8c900113be6e5db8)\n > ###### 网站地址 [链接](https://z-ti.github.io/fly-ui/) \n"
+              },
+              "at": {
+                  "atMobiles": [
+                      "17600299297"
+                  ],
+                  "atUserIds": [],
+                  "isAtAll": false
+              }
+            }
+      
+      - name: Send dingding fail notify
+        if: ${{ failure() }}
+        uses: zcong1993/actions-ding@master
+        with:
+          dingToken: ${{ secrets.DING_TOKEN }}
+          secret: ${{ secrets.DING_SECRET }}
+          body: |
+            {
+              "msgtype": "markdown",
+              "markdown": {
+                  "title": "部署状态",
+                  "text": "#### 部署失败 @17600299297 \n > 千磨万击还坚劲，任尔东西南北风。 \n > ![screenshot](https://pics3.baidu.com/feed/b999a9014c086e06587499b07945b7f208d1cbc5.jpeg?token=a53a305d267f0de6a749d01e182945d4)\n > ###### 网站地址 [链接](https://z-ti.github.io/fly-ui/) \n"
+              },
+              "at": {
+                  "atMobiles": [
+                      "17600299297"
+                  ],
+                  "atUserIds": [],
+                  "isAtAll": false
+              }
+            }
