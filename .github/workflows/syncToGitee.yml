@@ -25,15 +25,17 @@ jobs:
           secret: ${{ secrets.DING_SECRET }}
           body: |
             {
-              "msgtype": "link",
-              "link": {
-                  "text": "成功",
+              "msgtype": "markdown",
+              "markdown": {
                   "title": "部署状态",
-                  "picUrl": "",
-                  "messageUrl": "https://z-ti.github.io/fly-ui/"
+                  "text": "#### 部署成功 @17600299297 \n > 祝大家劳动节快乐！ \n > ![screenshot](https://cdn3-banquan.ituchong.com/weili/l/918150397474767003.jpeg)\n > ###### 网站地址 [链接](https://z-ti.github.io/fly-ui/) \n"
               },
               "at": {
-                  "isAtAll": true
+                  "atMobiles": [
+                      "17600299297"
+                  ],
+                  "atUserIds": [],
+                  "isAtAll": false
               }
             }
       
