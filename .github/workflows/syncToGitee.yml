@@ -29,3 +29,22 @@ jobs:
           gitee-repo: flybird-ui/fly-ui
           # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
           branch: gh-pages
+
+      - name: Send dingding notify
+        uses: zcong1993/actions-ding@master
+        with:
+          dingToken: ${{ secrets.DING_TOKEN }}
+          secret: ${{ secrets.DING_SECRET }}
+          body: |
+            {
+              "msgtype": "link",
+              "link": {
+                  "text": "成功",
+                  "title": "部署状态",
+                  "picUrl": "",
+                  "messageUrl": "https://z-ti.github.io/fly-ui/"
+              },
+              "at": {
+                  "isAtAll": true
+              }
+            }
