@@ -37,7 +37,8 @@ module.exports = {
               collapsable: false, // 不折叠
               children: [
                 { title: "条件类型", path: "/handbook/ConditionalTypes" },
-                { title: "泛型", path: "/handbook/Generics" }
+                { title: "泛型", path: "/handbook/Generics" },
+                { title: "测试", path: "/handbook/Test" }
               ],
             }
         ]
