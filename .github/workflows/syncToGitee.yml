@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - gh-pages
+
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
@@ -41,7 +42,7 @@ jobs:
               "msgtype": "markdown",
               "markdown": {
                   "title": "部署状态",
-                  "text": "#### 部署成功 @17600299297 \n > 意气成功日，春风起絮天。 \n > ![screenshot](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fseopic.699pic.com%2Fphoto%2F50088%2F9764.jpg_wh1200.jpg&refer=http%3A%2F%2Fseopic.699pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654021444&t=cdf518cc5f78036d8c900113be6e5db8)\n > ###### 网站地址 [链接](https://z-ti.github.io/fly-ui/) \n"
+                  "text": "#### ${{ github.ref_name }}分支代码 部署成功 @17600299297 \n > 意气成功日，春风起絮天。 \n > ![screenshot](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fseopic.699pic.com%2Fphoto%2F50088%2F9764.jpg_wh1200.jpg&refer=http%3A%2F%2Fseopic.699pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654021444&t=cdf518cc5f78036d8c900113be6e5db8)\n > ###### 访问地址 [链接](https://z-ti.github.io/fly-ui/) \n"
               },
               "at": {
                   "atMobiles": [
@@ -63,7 +64,7 @@ jobs:
               "msgtype": "markdown",
               "markdown": {
                   "title": "部署状态",
-                  "text": "#### 部署失败 @17600299297 \n > 千磨万击还坚劲，任尔东西南北风。 \n > ![screenshot](https://pics3.baidu.com/feed/b999a9014c086e06587499b07945b7f208d1cbc5.jpeg?token=a53a305d267f0de6a749d01e182945d4)\n > ###### 网站地址 [链接](https://z-ti.github.io/fly-ui/) \n"
+                  "text": "#### ${{ github.ref_name }}分支代码 部署失败 @17600299297 \n > 千磨万击还坚劲，任尔东西南北风。 \n > ![screenshot](https://pics3.baidu.com/feed/b999a9014c086e06587499b07945b7f208d1cbc5.jpeg?token=a53a305d267f0de6a749d01e182945d4)\n > ###### 查看错误详情 [链接](https://github.com/z-ti/fly-ui/actions) \n"
               },
               "at": {
                   "atMobiles": [
