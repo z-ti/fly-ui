@@ -64,5 +64,5 @@ Please make sure to read the [Issue Reporting Checklist](https://github.com/vuej
 
 ## Changelog
 
-Detailed changes for each release are documented in the [release notes](https://github.com/vuejs/vue/releases).
+Detailed changes for each release in the [release notes](https://github.com/vuejs/vue/releases).
 

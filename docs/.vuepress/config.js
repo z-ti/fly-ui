@@ -1,3 +1,6 @@
+
+const moment = require('moment');
+
 module.exports = {
     title: 'fly ui 文档',
     description: 'fly ui 最新官方文档',
@@ -5,6 +8,7 @@ module.exports = {
     // 主题和它的配置
     theme: '@vuepress/theme-default',
     themeConfig: {
+        lastUpdated: '上次更新',
         subSidebar: 'auto',
         // logo: 'https://vuejs.org/images/logo.png',
         logo: '/img/fly.svg',
@@ -44,4 +48,17 @@ module.exports = {
             lang: 'zh-CN'
         }
     },
-  }
+    plugins: [
+        [
+          '@vuepress/last-updated',
+          {
+            transformer: (timestamp, lang) => {
+              // 不要忘了安装 moment
+              const moment = require('moment')
+              moment.locale(lang)
+              return moment(timestamp).fromNow()
+            }
+          }
+        ]
+    ]
+}
