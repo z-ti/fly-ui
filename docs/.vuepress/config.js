@@ -41,7 +41,7 @@ module.exports = {
               children: [
                 { title: "条件类型", path: "/handbook/ConditionalTypes" },
                 { title: "泛型", path: "/handbook/Generics" },
-                { title: "测试", path: "/handbook/Test" }
+                { title: "色值", path: "/handbook/Color" }
               ],
             }
         ]
