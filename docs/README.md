@@ -9,7 +9,6 @@ date: '2022-04-25'
 
 hhh has been designed for gradual adoption from the start, and **you can use as little or as much hhh as you need**:
 
-* Use [Online Playgrounds](https://hhhjs.org/docs/getting-started.html#online-playgrounds) to get a taste of hhh.
 * [Add hhh to a Website](https://hhhjs.org/docs/add-hhh-to-a-website.html) as a `<script>` tag in one minute.
 * [Create a New hhh App](https://hhhjs.org/docs/create-a-new-hhh-app.html) if you're looking for a powerful JavaScript toolchain.
 

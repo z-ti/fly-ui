@@ -36,12 +36,16 @@ module.exports = {
             },
             {
               title: "基础学习",
-              path: '/handbook/ConditionalTypes',
+              path: '/handbook/Color',
               collapsable: false, // 不折叠
               children: [
-                { title: "条件类型", path: "/handbook/ConditionalTypes" },
-                { title: "泛型", path: "/handbook/Generics" },
-                { title: "色值", path: "/handbook/Color" }
+                { title: "色值", path: "/handbook/Color" },
+                { title: "图标", path: "/handbook/Icon" },
+                { title: "按钮", path: "/handbook/Button" },
+                { title: "加载", path: "/handbook/Loading" },
+                { title: "信息全局提示", path: "/handbook/Toast" },
+                { title: "输入框", path: "/handbook/Input" },
+                { title: "单选框", path: "/handbook/Radio" }
               ],
             }
         ]

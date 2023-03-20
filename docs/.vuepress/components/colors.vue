@@ -48,7 +48,7 @@
 
 <script>
 import colors from "./variable.js";
-import flyTitle from "./base/title.vue";
+import flyTitle from "./base/Title.vue";
 export default {
   name: "demo",
   components: {

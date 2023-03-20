@@ -1,6 +1,6 @@
 <template>
   <h2
-    data-tool="mdnice编辑器"
+    data-tool="模块标题"
     class="title-warpper"
   >
     <span
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "flyTitle",
+  name: "FlyTitle",
   props: {
     title: {
         type: String,
@@ -51,6 +51,12 @@ export default {
     margin-top: 38px;
     font-size: 20px;
     margin-bottom: 10px;
+  }
+}
+
+h2 {
+  &::before {
+    border-left: none !important;
   }
 }
 </style>
